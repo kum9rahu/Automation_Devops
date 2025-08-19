@@ -1,0 +1,65 @@
+Maven== Build Management Tool
+====================================
+Maven Build/Project Management Tool
+
+
+
+Maven Project Execution
+======================	
+	1. Using POM.XML
+	2.Using CLI
+		---->step 1 :using Command line -need to download Maven Local Machine
+			https://maven.apache.org/download.cgi?.
+			step2 : Download Binary zip archive and save it some c drive
+			
+			step3 : need to set the step2 path in Enviornment variable setup with name MAVEN_HOME 
+			
+			step4 : Verify with mvn -version 
+			step5 : mvn clean
+			step6 : mvn test
+=======================================================================
+	3.Using Jenkins
+	
+Before Understand this need to understand Version control (Git and Git Hub)
+
+
+Setup:
+=======================
+    1. Plugins
+=======================
+1. Compiler plugins
+
+Step 1: Navigate below Link and click  Compile Using A Different JDK
+		
+		https://maven.apache.org/plugins/maven-compiler-plugin/
+	 copy line no 6 to 16 and then paste and replace this plugin with your existing maven-compiler-plugin to your pom.XML  
+
+Step 2: !-- path-to-javac --> Mention Java path here ${JAVA-HOME}/bin/javac
+		Also make sure that Enviornment variable is set for your java path as JAVA-HOME with value C:\Program Files\Java\jdk-23
+
+
+============================================
+2. Surefire Plugins
+
+Step 1: Navigate below Link and click "Using TestNG" and then navigate "Using Suite XML Files"
+		https://maven.apache.org/surefire/maven-surefire-plugin/
+
+ copy line no 3 to 12 and then paste and replace this plugin with your existing maven-surefire-plugin to your pom.XML  
+ 
+ step2: replace testng with your Testng xml suite (CRM1) UNDER suiteXmlFile tag
+
+step2 : Our Current project  testNg suite is handled 
+
+STEP 3: update the Maven Project (Right click on the project -> Maven->Update Project )
+======================================================
+Goals to Execute Maven
+==============================
+Goals(Action)
+
+	1. Clean(To delete reports from Target Folder)
+	
+	2.Test(To Test Project)
+	
+	3.Install(Installation of required files + test) 
+	
+https://maven.apache.org/guides/
